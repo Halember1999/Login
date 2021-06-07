@@ -1,0 +1,59 @@
+<html>
+    <title>Login Form</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="Mounika-login.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/C:\Users\Mounika\Desktop\login\Mounika-jquery.js"></script>
+    
+    </head>
+    <body>
+        <br><br><br><br><br>
+        <div class="container p-3 division align-center" >
+        <h1 class="text-center color" >Login</h1>
+        <div class="row vh-20 justify-content-center align-items-center" >
+        <form class="col-4 col-sm-6 col-lg-4 col-md-4 justify-content-center">
+            <div class="form-group">
+                <label class="form-control-label text ">Email Address:</label>
+            <input type="email" class="form-control" placeholder="type your email here" id="email">
+            </div>
+            <div class="form-group" id="pwd" >
+            <label class="form-control-label text ">Password:</label>
+            <input type="password" class="form-control" placeholder="type your password here" data-toggle="password" id="password">
+            </div>
+            <div class="form-group">
+            <input type="checkbox" name="checkbox" value="Checkbox">
+                <label for="checkbox" class="text" >Show Password</label>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-light"
+                        id="login" type="submit">Submit</button>
+            </div>
+          </form>
+            </div>
+        </div>
+    </body>
+    <script>
+    $(document).ready(function(){
+    $("[type=checkbox]").click(function(){
+        $("[type=password]").attr("type","text");       
+});    
+
+$("#login").click(function(){
+ var email = $("#email").val();
+var password = $("#password").val();
+// Checking for blank fields.
+if( email =='' || password ==''){
+$('input[type="text"],input[type="password"]').css("border","2px solid red");
+$('input[type="text"],input[type="password"]').css("box-shadow","0 0 3px red");
+alert("Please fill all fields");
+
+}
+              });   
+                  });
+    </script>
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <title>Main Page</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="Mounika-login.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/C:\Users\Mounika\Desktop\login\Mounika-jquery.js"></script>
+        
+    </head>
+    <body>
+        <div class="container">  
+             <input type="button" value="LOGIN" class="login" onclick='window.open("Mounika-Login_form.html","_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=150,left=500,width=600, height=400")'>
+        </div>
+        
+    </body>
+    <script>
+        $(document).ready(function(){
+    $("[type=checkbox]").click(function(){
+        $("[type=password]").attr("type","text");       
+});    
+
+$("#login").click(function(){
+ var email = $("#email").val();
+var password = $("#password").val();
+// Checking for blank fields.
+if( email =='' || password ==''){
+$('input[type="text"],input[type="password"]').css("border","2px solid red");
+$('input[type="text"],input[type="password"]').css("box-shadow","0 0 3px red");
+alert("Please fill all fields");
+
+}
+              });   
+                  });
+    </script>
+</html>
+        
